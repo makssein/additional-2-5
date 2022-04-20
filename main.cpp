@@ -5,9 +5,9 @@ public:
         i = new int[j];
     }
     virtual ~Foo() { //добавлено virtual
-        delete[] i; // delete -> delete[]
+        delete[] i; // delete -> delete[] // вот тут ошибка
     }
-private:
+protected: // private -> protected
     int* i;
 };
 
@@ -19,7 +19,7 @@ public:
     virtual ~Bar() { //добавлено virtual
         delete[] i; // delete -> delete[]
     }
-private:
+protected: // private -> protected
     char* i;
 };
 
